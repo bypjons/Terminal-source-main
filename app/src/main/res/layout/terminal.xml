@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_layout"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/output_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF00"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#111111"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textColor="#00FF00"
+            android:textSize="16sp"
+            android:fontFamily="monospace"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="4dp" />
+
+        <EditText
+            android:id="@+id/command_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#00FF00"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:background="@null"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:inputType="text|textNoSuggestions"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
