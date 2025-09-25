@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "terminal manager"
+rootProject.name = "terminal"
 include ':app'
